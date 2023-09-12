@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using Ch4Lab.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<ContactManagerContext>(opt => 
+opt.UseSqlServer(builder.Configuration.GetConnectionString("ContactManagerContext"))
+);
 
 var app = builder.Build();
 

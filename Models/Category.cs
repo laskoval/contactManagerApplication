@@ -1,4 +1,5 @@
 namespace Ch4Lab.Models;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 public class Category
 {
